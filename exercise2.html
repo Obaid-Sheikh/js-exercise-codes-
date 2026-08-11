@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        max-width: 500px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="103739-3840x2160-desktop-4k-spider-man-into-the-spider-verse-background-photo.jpg"
+      alt=""
+      id="img-1"
+    />
+    <img
+      src="309524-3840x2160-desktop-4k-spider-man-background.jpg"
+      alt=""
+      id="img-2"
+    />
+    <button id="btn">Click me!</button>
+  </body>
+  <script>
+    var img1 = document.body.querySelector("#img-1");
+    var img2 = document.body.querySelector("#img-2");
+    var Cbtn = document.body.querySelector("#btn");
+
+    Cbtn.addEventListener("click",function(){
+      img1.src = "309524-3840x2160-desktop-4k-spider-man-background.jpg"
+      img2.src = "103739-3840x2160-desktop-4k-spider-man-into-the-spider-verse-background-photo.jpg"
+    });
+  </script>
+</html>
