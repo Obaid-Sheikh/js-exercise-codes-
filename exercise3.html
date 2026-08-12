@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="cont">
+      <form id="form">
+        <input type="text" id="inp2" />Enter your Name
+        <input type="text" id="inp1" />enter your ID
+        <input type="submit" id="submit" />
+        <h4 id="error"></h4>
+      </form>
+    </div>
+  </body>
+  <script>
+    var form = document.querySelector("#form");
+    var inps = document.querySelectorAll('input[type = "text"]');
+    var error = document.querySelector("#error");
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+
+      // if (inp1.value === "" || inp2.value === "") {
+      //   console.error("Some fields are empty")
+      //   error.textContent = "Some fields are empty";
+
+      // }
+        // ---------------------------------------------
+      // inps.forEach((element) => {
+      //   if (element.value === "") {
+      //     error.textContent = "Some fields are empty"
+      //   }
+      //   else{
+      //     error.textContent = ""
+      //   }
+      // });
+        // ------------------------------------------------
+      for(var i = 0 ; i<inps.length ; i++){
+        if(inps[i].value === ''){
+          error.textContent = "Some fields are empty"
+          break;
+        }
+        else{
+          error.textContent = ""
+         }
+      }
+    });
+  </script>
+</html>
